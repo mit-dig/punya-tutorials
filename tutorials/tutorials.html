@@ -1,0 +1,595 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		
+
+		   <!-- Custom styles for this template -->
+    	<link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+	
+		<link href="tree.css" rel="stylesheet">
+		<link href="simple-sidebar.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">		
+
+		<style type="text/css" media="screen">
+			.numberCircle {
+			    border-radius: 50%;
+			    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+			    width: 30px;
+			    height: 25px;
+			    padding: 8px;
+			    
+			    background: #fff;
+			    border: 2px solid #666;
+			    color: #666;
+			    text-align: center;
+			    
+			    font: 12px Arial, sans-serif;
+			}
+		</style>
+		<title>Punya Tutorials</title>
+	</head>
+
+	<body>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <!-- <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Punya</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+ -->
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+<!--     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+ -->      <!-- Indicators -->
+<!--       <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:Tutorials" alt="Tutorials">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Tutorials</h1>
+              <p>Learn about the Punya components by following these step-by-step guides.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Explore</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:App Gallery" alt="App Gallery">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>App Gallery</h1>
+              <p>Check out some of the apps built using the Punya framework, and learn how to modify them.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div> --><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="container marketing">
+
+    <!-- START THE FEATURETTES -->
+
+  <hr class="divider">
+
+  <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#punya">Punya Tutorials</a>
+                </li>
+                <li><a href="#consume">Consuming Linked Data</a>
+                </li>
+                <li><a href="#produce">Producing Linked Data</a>
+                </li>
+                <li><a href="#push">Push Messaging</a>
+                </li>
+                <li><a href="#uiFeatures">User Interface Features</a>
+                </li>
+                <li><a href="#third_party">Punya Web Services</a>
+                </li>
+            </ul>
+        </div>
+
+  <a id="punya"></a>
+
+  <h1><span class="glyphicon glyphicon-th"></span> Punya Tutorials<br/></h1> <br> <br>
+
+  <div class="row featurette">
+  <p class="lead">The video below summarizes many of the functionalities that are described in detail in Tutorials 1 - 15. We encourage you to take a look at this first before starting this tutorial. </p>
+
+  <iframe width="560" height="315" src="//www.youtube.com/embed/SQkX56FVRHY" frameborder="0" allowfullscreen></iframe>
+
+<br><br><br>
+
+  <p class="lead">For many of the tutorials listed below we have included the <em>AIA file</em> that you can try out on our App Inventor Punya instance at <a href="http://ai-qcri-test.appspot.com/">http://ai-qcri-test.appspot.com/</a>, and the <em>APK file</em> that you can try out on your phone.</p>
+  </div>
+
+<br><br><br>
+ 
+
+	<div class="tree well">
+	    <ul>
+	        <li>
+	            <span><i class="icon-folder-open"></i> <a href="#punya">Punya Tutorial Roadmap</a></span> 
+	            <ul>
+	                <li>
+	                	<span><i class="icon-minus-sign"></i> <a href="#consume">Consuming Linked Data</a></span> 
+	                    <ul>
+	                        <li>
+		                        <span><span class="numberCircle">1</span> <a href="#1">Query a Remote SPARQL Endpoint</a></span> 
+	                        </li>
+	                        <li>
+		                        <span><span class="numberCircle">2</span> <a href="#2"> Display Linked Data on a Map</a></span> 
+	                        </li>
+	                        <li>
+		                        <span><span class="numberCircle">3</span> <a href="#3"> Get Results for the Current Location</a></span> 
+	                        </li>
+	                    </ul>
+	                </li>
+	                <li>
+	                	<span><i class="icon-minus-sign"></i> <a href="#produce">Producing Linked Data</a></span>
+	                    <ul>
+	                        <li>
+		                        <span><span class="numberCircle">4</span> Construct a form to enter missing person data</span> <a href="">Goes somewhere</a>
+	                        </li>
+	                        <li>
+		                        <span><span class="numberCircle">5</span> Save the constructed data in the phone</span> <a href="">Goes somewhere</a>
+	                        </li>
+	                        <li>
+		                        <span><span class="numberCircle">6</span> Insert constructed triples in a SPARQL endpoint</span> <a href="">Goes somewhere</a>
+	                        </li>
+	                    </ul>
+	                </li>
+	                <li>
+	                	<span><i class="icon-minus-sign"></i> <a href="#push">Push Messaging</a></span> 
+	                    <ul>
+	                        <li>
+		                        <span><span class="numberCircle">7</span> Send an alert to a phone</span> <a href="">Goes somewhere</a>
+	                        </li>
+	                        <li>
+		                        <span><span class="numberCircle">8</span> Construct a report and send it to a streaming service</span> <a href="">Goes somewhere</a>
+	                        </li>
+	                        <li>
+		                        <span><span class="numberCircle">9</span> Receive reports from a streaming service</span> <a href="">Goes somewhere</a>
+	                        </li>
+	                    </ul>
+	                </li>
+	                <li>
+	                	<span><i class="icon-minus-sign"></i> <a href="#uiFeatures">User Interface Features</a></span>
+	                    <ul>
+	                        <li>
+		                        <span><span class="numberCircle">10</span> Linked Data List Picker</span> <a href="">Goes somewhere</a>
+	                        </li>
+	                        <li>
+		                        <span><span class="numberCircle">11</span> <a href="#11">Auto-completion</a></span>
+	                        </li>
+	                        <li>
+		                        <span><span class="numberCircle">12</span> <a href="#12">Pop-up boxes</a></span> 
+	                        </li>
+	                    </ul>
+	                </li>
+                  <li>
+              <span><i class="icon-folder-open"></i> <a href="#third_party">Setting up Third Party Web Services that interact with Punya components</span></a> 
+              <ul>
+                  <li>
+                    <span><span class="numberCircle">13</span> <a href="#13">Google Maps</a></span> 
+              </li>
+                  <li>
+                    <span><span class="numberCircle">14</span> <a href="#14">Google App Scripts Server for Google Cloud Messaging</a></span>
+              </li>
+                  <li>
+                    <span><span class="numberCircle">15</span> <a href="15">C-SPARQL for Streaming RDF Data</span> 
+              </li>
+
+            </ul>
+          </li>         
+
+	            </ul>
+	        </li>
+	    </ul>
+	</div>
+
+<hr class="featurette-divider">
+  
+	
+  <a name="consume"></a>
+  <h1><span class="glyphicon glyphicon-th-list"></span> Consuming Linked Data<br/></h1> <br> <br>
+  
+
+      <div class="row featurette">
+      	<a id="1"></a>
+         <h2 class="heading">1. Query a Remote Endpoint<br/></h2>
+          <div class="col-md-12">
+          <p class="lead">In this screencast we will show you how to query <a href="http://dbpedia.org/sparql">DBPedia</a> and obtain the raw results. We use the LinkedData component, and a Label to display the results. </p>
+
+          <p>The query used in this app is <br/>
+          <code><br/>
+            PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;<br/>
+          	SELECT * WHERE { <br/>
+			?snippet a dbo:Place; <br/>
+			&nbsp;&nbsp;&nbsp;geo:lat ?lat;<br/>
+			&nbsp;&nbsp;&nbsp;geo:long ?lng. <br/>
+			FILTER (?lat > 42 - 1 && ?lat < 42 + 1 && <br/>
+			        ?lng > -71 -1 && ?lng < -71 + 1) <br/>
+			}<br/>
+			LIMIT 100</code></p>
+        
+        <p>
+        	<iframe width="560" height="315" src="//www.youtube.com/embed/6fatoQ_y7D8" frameborder="0" allowfullscreen></iframe>
+        </p>
+		<p>
+        	<a href="1/BasicQuery.aia">
+            <button type="button" class="btn btn-default btn-lg">
+        		  <span class="glyphicon glyphicon-download"></span>
+        		  <span class="glyphicon glyphicon-cloud-upload"></span>
+        		  AIA file
+        	</button>
+          </a>
+          <a href="1/BasicQuery.apk">
+        	 <button type="button" class="btn btn-default btn-lg">
+    		    <span class="glyphicon glyphicon-download"></span>
+            <span class="glyphicon glyphicon-phone"></span>
+        		APK file
+        	 </button>
+          </a>
+        </p>
+		</div>
+        
+    </div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <a id="2"></a>
+    <h2 class="heading">2. Display Linked Data on a Map<br/></h2>
+    <h3>
+      <span class="text-muted">Dependencies:</span> 
+      <span class="numberCircle">
+        <a href="#1">1</a>
+      </span> and 
+      <span class="numberCircle">
+        <a href="#13">13</a>
+      </span>
+    </h3>
+    
+    <div class="col-md-12">
+      <p class="lead">Continuing from the previous tutorial, we will show how to display spatial linked data results on a map. </p>
+      <p>
+        <iframe width="420" height="315" src="//www.youtube.com/embed/X4qGv9zZyjk" frameborder="0" allowfullscreen></iframe>
+      </p>
+		  <p>
+        <a href="2/DisplayMap.aia">
+          <button type="button" class="btn btn-default btn-lg">
+        		<span class="glyphicon glyphicon-download"></span>
+        		<span class="glyphicon glyphicon-cloud-upload"></span>
+        		AIA file
+        	</button>
+        </a>
+        <a href="2/DisplayMap.apk">
+        	<button type="button" class="btn btn-default btn-lg">
+    		    <span class="glyphicon glyphicon-download"></span>
+            <span class="glyphicon glyphicon-phone"></span>
+        		APK file
+        	</button>
+        </a>
+      </p>
+		</div>
+        
+  </div>
+
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+        <a id="3"></a>
+         <h2 class="heading">3. Get Results for the Current Location<br/></h2>
+         <h3><span class="text-muted">Dependencies:</span> <span class="numberCircle"><a href="#2">2</a></span> and <span class="numberCircle"><a href="#13">13</a></span></h3>
+          <div class="col-md-12">
+          <p class="lead">Let's use the <em>LocationSensor</em> to obtain the current location and query DBpedia for places near that location.</p>
+
+        
+        <p>
+        <iframe width="420" height="315" src="//www.youtube.com/embed/X4qGv9zZyjk" frameborder="0" allowfullscreen></iframe>
+        </p>
+    <p>
+          <a href="3/DisplayResultsforCurrentLocation.aia">
+            <button type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-download"></span>
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+            AIA file
+          </button>
+          </a>
+          <a href="3/DisplayResultsforCurrentLocation.apk">
+          <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-download"></span>
+                <span class="glyphicon glyphicon-phone"></span>
+            APK file
+          </button>
+          </a>
+        </p>
+    </div>
+</div>        
+ 
+<hr class="featurette-divider">
+
+<a id="produce"></a>
+<h1><span class="glyphicon glyphicon-th-list"></span> Producing Linked Data<br/></h1> <br> <br>
+
+<hr class="featurette-divider">
+
+<a id="push"></a>
+<h1><span class="glyphicon glyphicon-th-list"></span> Push Messaging<br/></h1> <br> <br>
+
+
+<hr class="featurette-divider">
+
+<a id="uiFeatures"></a>
+<h1><span class="glyphicon glyphicon-th-list"></span> User Interface Features<br/></h1> <br> <br>
+
+<div class="row featurette">
+  <a id="11"></a>
+    <h2 class="heading">11. Auto-completion<br/></h2>
+    
+    <div class="col-md-12">
+      <p class="lead"></p>
+    </div>
+</div>
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  
+  <a id="12"></a>
+    <h2 class="heading">12. Pop-up boxes<br/></h2>
+
+    <div class="col-md-12">
+      <p class="lead"> </p>
+    <p class="lead">
+      The property panel in the App Inventor interface has "?" signs next to each property name (See Fig 1) explaining what each of the properties are about.
+      These can be very useful in understanding Linked Data properties, such as <em>FormID</em> (Fig 2), and <em>InverseProperty</em> (Fig 3) that may not be obvious from the name. We encourage you to read the text to 
+      understand the correct usage of the properties.<br> <br>
+      <span class="col-md-4">
+        Fig 1 <br>
+        <img width="200px" alt="" src="img/12/popups.png">
+      </span>
+      <span class="col-md-4">
+        Fig 2 <br>
+        <img width="300px" alt="" src="img/12/formId.png">
+      </span>
+      <span class="col-md-4">
+        Fig 3 <br>
+        <img width="250px" alt="" src="img/12/inverseProperty.png">
+      </span>
+
+    </p>  
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+<a id="third_party"></a>
+<h1><span class="glyphicon glyphicon-th-list"></span> Third Party Services<br/></h1> <br> <br>
+
+<div class="row featurette">
+      	<a id="13"></a>
+         <h2 class="heading">13. Setting up Google Maps on App Inventor<br/></h2>
+          <div class="col-md-12">
+          <p class="lead">You need to include the Google Maps API key in your App Inventor Project and give the SHA1 of your app in the Google Apps Console Android Key. </p>
+          <p  class="lead">In Android, the SHA1 serves as the identifier for the app. This is required by Google if you want to publish the your created app to the Google Play Store.</p>
+          <p class="lead">
+          App Inventor has the default the package name and the class name, so you can’t change them. 
+          The default format is the following
+          <code>appinventor.ai_[gmail account name, exclude the “@gmail.com”].[app name]</code>
+          </p>
+          <p class="lead">Here are the steps you need to follow:</p>
+          
+          <ol>
+            
+            <li>Build the app at least once to get the SHA1 fingerprint.</li>
+            <li>Open the project’s UI Designer -> Settings -> SHA1 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#settings">screenshot</button></li>
+            <li>You should see a dialog box with the SHA1 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sha1">screenshot</button></li>
+            <li>Construct the Android key as follows: <code>[SHA1];appinventor.ai_[gmail account name, exclude the “@gmail.com”].[app name]</code>.</li>
+            <li>Go to the Google API console  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#devconsole">screenshot</button></li>
+            <li>Create new Key -> Android Key</li>
+            <li>Input the key created</li>
+            <li>Copy the API key <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mapskey">screenshot</button></li>
+            <li>Paste the API key in to the App Inventor settings dialog for <em>Google Maps API Key</em></li>
+          </ol>
+
+          <div id="settings" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <img alt="" src="img/13/settings.png" class="img-responsive"/>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="sha1" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <img alt="" src="img/13/sha1.png" class="img-responsive"/>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="devconsole" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <img alt="" src="img/13/devconsole.png" class="img-responsive"/>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="mapskey" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <img alt="" src="img/13/mapskey.png" class="img-responsive"/>
+                  </div>
+              </div>
+            </div>
+          </div>
+		</div>
+        
+    </div>
+
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <a id="14"></a>
+    <h2 class="heading">14. Google App Script Server for Google Cloud Messaging<br/></h2>
+    
+    <div class="col-md-12">
+      <p class="lead"> You need to set up a Web Service using the Google App Script Server to send and received messages to mobile phones. </p>
+      <p class="lead">We assume that you have basic JavaScript programming skills. Please refer to <a href="http://www.google.com/script/start/">Google App Script Server documentation</a>, and the <a href="http://developer.android.com/google/gcm/index.html">Google Cloud Messaging documentation</a>. Specifically, make sure you understand <a href="https://developers.google.com/apps-script/execution_web_apps#deploying">how to deploy a service</a>.</p>
+      <p  class="lead">We have shared a simple <a href="https://script.google.com/d/1hAr4LDietc06pSgB31Hx1KXSiEcCMvbofiKfa8aJKVTLGZqKmbjG_JM_/edit?usp=drive_web">Google App Script</a>. Please make a copy of that in your own Google Drive. You can tinker that script to deploy your own service.</p>
+      <p  class="lead"> The <code>doPost(e)</code> function in <code>serverMain.gs</code> captures HTTP Post messages from the phones and other services such as <a href="#csparql">CSPARQL Engine</a>. We have pre-defined several HTTP Post parameters and provided the logic to handle them. Please take a look at the following parameters:
+      <ul>
+        <li><code>type</code>: can take values <code>subscribe</code> (for a query subscription), <code>sendAll</code> (to send a message to all the devices registered with GCM) </li>
+        <li><code>regID</code>: when registering a device with GCM</li>
+        <li><code>contents</code>: the results from a CSPARQL query execution</li>
+      </ul>
+      </p>
+      <p class="lead">Using the Google App Script server in conjunction with CSPARQL: 
+      <ul>
+        <li>Please change the following in <code>serverConstants.gs</code>:
+        <ul>
+          <li><code>SERVER_URL</code>: URL of the CSPARQL engine if you are running your own instance</li>
+          <li><code>GCM_Server_URL</code>: URL of the deployed script</li>
+        </ul>
+        </li>
+        <li>In order to register a query, the <code>doPost</code> function should recieve the HTTP Post parameter <code>type</code> with value <code>subscribe</code></li>
+        <li>A <code>UUID</code> needs to be created to uniquely identify the query results targetted for the respective device</li>
+        <li><code>linkedDataMain.gs</code> lists some of the pre-packaged queries as well as helper functions</li>
+        </ul>
+      </p>
+      <p class="lead">Debugging: if you are testing database inserts or anything that does not require the receipt of an HTTP Post request, you may use <em>Run -> [name of function]</em>, and check for any output at <em>View -> Log</em>. To debug functions that are dependant on HTTP Post requests, please follow this procedure:
+      <ul>
+        <li>Create a spreadsheet in your Google Drive, and locate the id of the document. (The id is the long string of charaters that follow <em>https://docs.google.com/spreadsheets/d/</em> )</li>
+        <li>Copy the id to  <code>LOGGING_SPREADSHEET_ID</code> in <code>serverConstants.gs</code>.</li>
+        <li>The <code>MyLog</code> function in <em>serverMain.gs</em> implements the logging functionality.</li>
+        <li>The function as <code>MyLog(functionName, tag, msg)</code></li>
+        <li>You will see the debug output in the spreadsheet you created.</li>
+        <li>Please note that having <code>MyLog</code> will significantly slow down your app. So, make sure to comment out or remove MyLog calls in a production settings.</li>
+      </ul></p>
+    </div>
+        
+  </div>
+
+
+<hr class="featurette-divider">
+<div class="row featurette">
+  <a id="15"></a>
+  <h2 class="heading">15. C-SPARQL for Streaming RDF Data<br/></h2>
+    
+  <div class="col-md-12">
+    <p class="lead">
+    We have used <a href="http://streamreasoning.org/download">C-SPARQL</a> to add streaming capabilities to Punya apps. Streaming data can be very useful in crowdsourcing applications where different parties can submit information that needs to be filtered based on a certain criteria.
+    </p>
+    <p class="lead">We have set up a C-SPARQL endpoint for experimentation at <a href="http://air.csail.mit.edu:8175/streams">http://air.csail.mit.edu:8175/ </a>. If you like to register your own stream and feed data to it, please follow these steps. For more detailed information please refer to the official C-SPARQL <a href="http://streamreasoning.org/download">documentation</a>.
+    <ul>
+      <li>Register the stream: 
+        <blockquote>
+          <p><code>curl PUT http://air.csail.mit.edu:8175/streams/[URL encoded stream URI]</code> for example, 
+          <pre>
+  curl PUT http://air.csail.mit.edu:8175/streams/http%3A%2F%2Fex.org%2Fgcm</pre></p>
+        </blockquote>
+      </li>
+      <li>Register a query:
+      <blockquote>
+      <pre>
+  curl -X PUT http://air.csail.mit.edu:8175/queries/test -d 'REGISTER STREAM test AS
+  PREFIX : &lt;http://streamreasoning.org/ontologies/sr4ld2013-onto#&gt;
+  select * 
+  FROM STREAM &lt;http://ex.org/gcm&gt; [RANGE 1m STEP 10s] 
+  WHERE { ?s ?p ?o. }'
+      </pre>
+      </blockquote></li>
+
+    <li>Register an observer for the query: (note that the Google App Script server can be configured to be an observer)
+    <blockquote>
+      <pre>
+  curl -X POST http://air.csail.mit.edu:8175/queries/test -d [Observer URI]
+      </pre>
+    </blockquote></li>
+    <li>Feed RDF data to the respective stream
+    <blockquote>
+    <pre>
+  curl -X POST -H 'Content-Type: text/plain; charset=UTF-8' -d [DATA]  http://localhost:8175/streams/http%3A%2F%2Fex.org%2Fgcm
+    </pre>
+    </blockquote></li>
+    </ul>
+    </p>
+  </div>
+</div>
+
+     
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; Decentralized Information Group, MIT CSAIL &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/docs.min.js"></script>
+    <script src="tree.js"></script> 
+  </body>
+</html>
