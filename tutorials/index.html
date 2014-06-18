@@ -219,7 +219,10 @@
                     <span><span class="numberCircle">14</span> <a href="#14">Google App Scripts Server for Google Cloud Messaging</a></span>
               </li>
                   <li>
-                    <span><span class="numberCircle">15</span> <a href="15">C-SPARQL for Streaming RDF Data</span> 
+                  <span><span class="numberCircle">15</span> <a href="#15">C-SPARQL for Streaming RDF Data</a></span> 
+              </li>
+                  <li>
+                  <span><span class="numberCircle">16</span> <a href="#16">Uploading Images Using TinyWebDB</a></span> 
               </li>
 
             </ul>
@@ -645,7 +648,23 @@ then be used in our platform or in Javascript-powered visualizations.</p>
   </div>
 </div>
 
-     
+<hr class="featurette-divider">
+<div class="row featurette">
+  <a id="16"></a>
+  <h2 class="heading">16. Storing Images using TinyWebDB<br/></h2>
+    
+  <div class="col-md-12">
+    <p class="lead">
+    Often times we will need to upload images to the web, to be later consumed by other users. In order to provide an easy and quick way for App Inventor users, we have enhanced an existing component to store and retrieve pictures from the web. These pictures will not be available to the public. The following tutorial will cover common steps required to store and retrieve a picture from the web:
+    <ol>
+        <li> Use the TinyWebDB "StorePicture" method with a picture path as the parameter (obtained either from ImagePicker or Camera), plus an optional tag parameter
+        <li> When the picture has been stored, the TinyWebDB "PictureStored" event is raised with a picture UUID (universally unique identifier) as a parameter, this UUID can be used to retrieve the picture from the web later.  
+        <li> Test retrieving the picture via UUID by calling TinyWebDB "GetPicture" method with the UUID as parameter.
+        <li> The TinyWebDB "GotPicture" event will be raised whenever the picture is received, along with the picture there is also the optional tag and other information. 
+    </ol>
+    </p>
+  </div>
+</div>
 
       <!-- /END THE FEATURETTES -->
 
