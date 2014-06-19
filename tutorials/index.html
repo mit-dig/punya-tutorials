@@ -176,10 +176,10 @@
 		                        <span><span class="numberCircle">4</span> <a href="#4">Construct a Form</a></span>
 	                        </li>
 	                        <li>
-		                        <span><span class="numberCircle">5</span> Save the constructed data in the phone</span> <a href="">Goes somewhere</a>
+		                        <span><span class="numberCircle">5</span> <a href="#5">Save the constructed data in the phone</a></span>
 	                        </li>
 	                        <li>
-		                        <span><span class="numberCircle">6</span> Insert constructed triples in a SPARQL endpoint</span> <a href="">Goes somewhere</a>
+		                        <span><span class="numberCircle">6</span> <a href="#6">Insert constructed triples in a SPARQL endpoint</a></span>
 	                        </li>
 	                    </ul>
 	                </li>
@@ -187,13 +187,13 @@
 	                	<span><i class="icon-minus-sign"></i> <a href="#push">Push Messaging</a></span> 
 	                    <ul>
 	                        <li>
-		                        <span><span class="numberCircle">7</span> Send an alert to a phone</span> <a href="">Goes somewhere</a>
+		                        <span><span class="numberCircle">7</span> <a href="7">Send an alert to a phone</a></span>
 	                        </li>
 	                        <li>
-		                        <span><span class="numberCircle">8</span> Construct a report and send it to a streaming service</span> <a href="">Goes somewhere</a>
+		                        <span><span class="numberCircle">8</span> <a href="#8">Construct a report and send it to a streaming service</a></span> 
 	                        </li>
 	                        <li>
-		                        <span><span class="numberCircle">9</span> Receive reports from a streaming service</span> <a href="">Goes somewhere</a>
+		                        <span><span class="numberCircle">9</span> <a href="9">Receive reports from a streaming service</a></span>
 	                        </li>
 	                    </ul>
 	                </li>
@@ -430,7 +430,10 @@
 
         <p>
         </p>
+
         </div>
+        
+		<br>
         <div class="col-md-12">
         	<div class="col-md-6">
         		<span class="lead">The components to model the above scenario appear as follows in the designer view:</span>
@@ -445,15 +448,29 @@
         		
         	</div>
          </div>
-        <p></p>
-        <div class="col-md-12">
-    		<span class="lead">
-    			The blocks used to express the relationships are as follows: <br> You may alternatively set these properties in the designer view. <br> 
-    			Note that the LocationLinkedDataForm has both <i>ObejectURI</i> to represent the type of its own form, and a <i>propertyURI</i> to specify the relationship to the parent form.
-    		</span>
-    		<img src="img/form/property_block.png" alt="">
-    		
-    	</div>
+
+         <p></p>
+         </div><br>
+         <br>
+         <div class="col-md-12">
+         		<div class="lead">We will include some non-visible components such as the LinkedData and LocationProbeSensors. <i>LinkedData1</i> is used to serialize the form into triples and write them to storage. <i>LinkedData2</i> is used for reading those triples from a file in storage. <i>LocationProbeSensor</i> is used for obtaining the latitude and longitude of the user's current location.
+         		</div>
+         		<img alt="" src="img/form/non-visible.png" width="400">
+         	
+         </div>
+
+         <div class="col-md-12">
+         	<div class="lead">
+         	<br>
+         	This is how to enable the <i>LocationProbeSensor</i> and populate the latitude and longitude textboxes.<br>
+	 	    Also, notice how we ave initialized the blocks used to express the relationships in the form. <br> You may alternatively set these properties in the designer view. <br> 
+			Note that the LocationLinkedDataForm has both <i>ObejectURI</i> to represent the type of its own form, and a <i>propertyURI</i> to specify the relationship to the parent form.
+
+         	</div>
+         	<img src="img/form/location.png" alt="">
+         </div>
+       
+        <br>
 
     	<p class="lead">You have now created a Linked Data using Punya components!</p>
     <p>
@@ -471,15 +488,166 @@
             APK file
           </button>
           </a>
-        </p>
+     </p>
     
-</div>        
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+
+    <a id="5"></a>
+     <h2 class="heading">5. Save the constructed data in the phone<br/></h2>
+     <div>
+     	<p class="lead"> When using the the LinkedDataForm, it has to be used in conjunction with the LinkedDataForm. To "convert" the data represented in the form in to a LinkedData format, first call the <i>AddDataFromLinkedDataForm</i> method in the <i>LinkedData1</i> component. This will create a model of the data in the LinkedData1 component. <br>
+     	If the conversion worked, you can call the <i>WriteDataToLocal</i> method in LinkedData1 component. Please note the path you have to give should be an absolute path. If you use <code>/sdcard/data.ttl</code>, the data file will be created at the root of your mobile phone's file system. <br>
+     	If the file was successfully written to the phone, you may read it using another LinkedData component. We have used <i>LinkedData2</i> for this purpose.
+      	</p>
+      	<img src="img/completeForm/blocks.png" alt="" width="1000">
+
+     </div>
+
+         <p>
+          <a href="5/LDFormComplete.aia">
+            <button type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-download"></span>
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+            AIA file
+          </button>
+          </a>
+          <a href="5/LDFormComplete.apk">
+          <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-download"></span>
+                <span class="glyphicon glyphicon-phone"></span>
+            APK file
+          </button>
+          </a>
+        </p>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+
+    <a id="6"></a>
+     <h2 class="heading">6. Insert constructed triples in a SPARQL endpoint<br/></h2>
+     <div>
+     	<p class="lead">
+      	</p>
+      	<img src="img/LDFormWeb/blocks.png" alt="" width="1000">
+
+     </div>
+
+         <p>
+          <a href="6/LDFormWeb.aia">
+            <button type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-download"></span>
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+            AIA file
+          </button>
+          </a>
+          <a href="6/LDFormWeb.apk">
+          <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-download"></span>
+                <span class="glyphicon glyphicon-phone"></span>
+            APK file
+          </button>
+          </a>
+        </p>
+</div>
 
 <hr class="featurette-divider">
 
 <a id="push"></a>
 <h1><span class="glyphicon glyphicon-th-list"></span> Push Messaging<br/></h1> <br> <br>
 
+
+<div class="row featurette">
+
+    <a id="7"></a>
+     <h2 class="heading">7. Send an alert to a phone<br/></h2>
+     <div>
+     	<p class="lead">
+      	</p>
+
+     </div>
+
+         <p>
+          <a href="7/GCM.aia">
+            <button type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-download"></span>
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+            AIA file
+          </button>
+          </a>
+          <a href="7/GCM.apk">
+          <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-download"></span>
+                <span class="glyphicon glyphicon-phone"></span>
+            APK file
+          </button>
+          </a>
+        </p>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+
+    <a id="8"></a>
+     <h2 class="heading">8. Construct a report and send it to a streaming service<br/></h2>
+     <div>
+     	<p class="lead">
+      	</p>
+
+     </div>
+
+         <p>
+          <a href="8/SendStreamUpdates.aia">
+            <button type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-download"></span>
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+            AIA file
+          </button>
+          </a>
+          <a href="8/SendStreamUpdates.apk">
+          <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-download"></span>
+                <span class="glyphicon glyphicon-phone"></span>
+            APK file
+          </button>
+          </a>
+        </p>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+
+    <a id="9"></a>
+     <h2 class="heading">9. Receive reports from a streaming service<br/></h2>
+     <div>
+     	<p class="lead">
+      	</p>
+
+     </div>
+
+         <p>
+          <a href="9/ReceiveStreamUpdates.aia">
+            <button type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-download"></span>
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+            AIA file
+          </button>
+          </a>
+          <a href="9/ReceiveStreamUpdates.apk">
+          <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-download"></span>
+                <span class="glyphicon glyphicon-phone"></span>
+            APK file
+          </button>
+          </a>
+        </p>
+</div>
 
 <hr class="featurette-divider">
 
