@@ -115,8 +115,9 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#punya">Punya Tutorials</a>
+                <li class="sidebar-brand"><a href="#punya">Punya</a>
                 </li>
+                <li class="sidebar"><a href="#roadmap">Punya Tutorials Overview</a></li>
                 <li><a href="#consume">Consuming Linked Data</a>
                 </li>
                 <li><a href="#produce">Producing Linked Data</a>
@@ -132,7 +133,7 @@
 
   <a id="punya"></a>
 
-  <h1><span class="glyphicon glyphicon-th"></span> Punya Tutorials<br/></h1> <br> <br>
+  <h1><span class="glyphicon glyphicon-th"></span> Punya<br/></h1> <br> <br>
 
   <div class="row featurette">
 
@@ -149,11 +150,11 @@
 
 <br><br><br>
  
-
+	<a id="roadmap"></a>
 	<div class="tree well">
 	    <ul>
 	        <li>
-	            <span><i class="icon-folder-open"></i> <a href="#punya">Punya Tutorial Roadmap</a></span> 
+	            <span><i class="icon-folder-open"></i> <a href="#punya">Punya Tutorials Overview</a></span> 
 	            <ul>
 	                <li>
 	                	<span><i class="icon-minus-sign"></i> <a href="#consume">Consuming Linked Data</a></span> 
@@ -187,13 +188,13 @@
 	                	<span><i class="icon-minus-sign"></i> <a href="#push">Push Messaging</a></span> 
 	                    <ul>
 	                        <li>
-		                        <span><span class="numberCircle">7</span> <a href="7">Send an alert to a phone</a></span>
+		                        <span><span class="numberCircle">7</span> <a href="#7">Send a message from a phone</a></span>
 	                        </li>
 	                        <li>
 		                        <span><span class="numberCircle">8</span> <a href="#8">Construct a report and send it to a streaming service</a></span> 
 	                        </li>
 	                        <li>
-		                        <span><span class="numberCircle">9</span> <a href="9">Receive reports from a streaming service</a></span>
+		                        <span><span class="numberCircle">9</span> <a href="#9">Receive reports from a streaming service</a></span>
 	                        </li>
 	                    </ul>
 	                </li>
@@ -290,7 +291,7 @@
   <a id="2"></a>
     <h2 class="heading">2. Display Linked Data on a Map<br/></h2>
     <h3>
-      <span class="text-muted">Make sure you have completed Tutorials </span> 
+      <span class="text-muted">Please make sure you have completed Tutorials </span> 
       <span class="numberCircle">
         <a href="#1">1</a>
       </span> and 
@@ -331,7 +332,7 @@
 <div class="row featurette">
         <a id="3"></a>
          <h2 class="heading">3. Populate a List Picker Dynamically<br/></h2>
-         <h3><span class="text-muted">Make sure you have completed </span> Tutorial <span class="numberCircle"> <a href="#1">1</a></span> before attempting this.</h3>
+         <h3><span class="text-muted">Please make sure you have completed </span> Tutorial <span class="numberCircle"> <a href="#1">1</a></span> before attempting this.</h3>
           <div class="col-md-12">
           <p class="lead">We have introduced the Linked Data List Picker that is able to query a remote endpoint for entities and populate them in the list picker instance. This enables the mobile application user to pick from a dynamic list of values that are obtained from querying a remote dataset rather than being limited to a set of static values. For example, assume you want to list all the currently available different disaster types that can be obtained by running the following SPARQL query at run-time:</p>
 
@@ -377,8 +378,6 @@
 
 <a id="produce"></a>
 <h1><span class="glyphicon glyphicon-th-list"></span> Producing Linked Data<br/></h1> <br> <br>
-
-<hr class="featurette-divider">
 
 <div class="row featurette">
         <a id="4"></a>
@@ -531,9 +530,19 @@
     <a id="6"></a>
      <h2 class="heading">6. Insert constructed triples in a SPARQL endpoint<br/></h2>
      <div>
-     	<p class="lead">
+     	<p class="lead"> Often times you need to store the data produced in a form in a remote endpoint. The punya framework allows you to do that with a SPARQL 1.1 endpoint of your choice. In this example, we have used <a href="http://dydra.com/">Dydra</a>. You too can request an account from the Dydra team to store the data produced in your forms, or setup your own SPARQL updateable endpoint.
       	</p>
+
+      	<p class="lead">Just as in <a href="#5">Tutorial 5</a>, you need to call <i>AddDataFromLinkedDataForm</i> on the <i>LinkedData</i> component. If the form triplifies correctly, call the <i>AddDataToWeb</i> method. If the triples are added to the default graph in the endpoint just add an empty string as shown in the figure below. If you are adding these triples into a specific "named" graph, add the URI of that graph there. </p>
       	<img src="img/LDFormWeb/blocks.png" alt="" width="1000">
+
+      	<p class="lead">You might also want to add some error handling blocks as follows.</p>
+
+      	<img alt="" src="img/LDFormWeb/errors.png">
+
+      	<p class="lead">In the Designer View, you want to give the correct endpoint URL for the LinkedData component. This will probably look something like:
+      	<code>http://5YvZSkM9MDyggix8zvh0@dydra.com/oshanis/test-api/sparql</code>
+      	</p>
 
      </div>
 
@@ -564,7 +573,40 @@
 <div class="row featurette">
 
     <a id="7"></a>
-     <h2 class="heading">7. Send an alert to a phone<br/></h2>
+     <h2 class="heading">7. Send a message from a phone<br/></h2>
+     <h3><span class="text-muted">Please make sure you have completed </span> Tutorial <span class="numberCircle"> <a href="#14">14</a></span> before attempting this.</h3>
+
+     <p class="lead">On App Inventor, we have included the following UI components, as well as the non-visible GoogleCloudMessaging and the Web components.</p>
+
+     <p class="lead">The designer view of appears as follows:</p>
+     <img alt="" src="img/gcm/designer_view.png" width="300">
+
+     <p class="lead">The blocks for the program logic is as follows:</p>
+
+     <img alt="" src="img/gcm/blocks.png">
+
+     <p class="lead">In the GoogleCloudMessaging component make sure to input your Google App Scripts Server URL.</p>
+
+     <p class="lead">In order to handle the device registration the <code>doPost</code> function in the <code>serverMain.gs</code> will include the following code snippet. </p>
+         
+     <code>
+     	if(eventInfo.parameter.regId) { <br>
+		&nbsp;&nbsp;&nbsp;var reg = db.query({regId : eventInfo.parameter.regId}).next(); <br>
+  		&nbsp;&nbsp;&nbsp;if(reg && eventInfo.parameter.type === 'unregister'){ <br>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.remove(reg); <br>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logger.log("Removed the given registration id."); <br>
+  		&nbsp;&nbsp;&nbsp;} <br>
+  		&nbsp;&nbsp;&nbsp;else if(!reg && eventInfo.parameter.type === 'register'){ <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.save(eventInfo.parameter); <br>
+     	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logger.log("Registered the given registration id."); <br>
+     	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sendGCM2One(eventInfo.parameter.regId, 'Ping from server!'); <br>
+  		&nbsp;&nbsp;&nbsp;} <br>
+		}
+      
+     </code>	
+
+     <p class="lead">After you register the device, you should see a registration successfully on the app, and if you type "{}" into your GCM Server page, you should see a new registration entry from your device.
+</p>
      <div>
      	<p class="lead">
       	</p>
@@ -572,14 +614,14 @@
      </div>
 
          <p>
-          <a href="7/GCM.aia">
+          <a href="7/GCMtest.aia">
             <button type="button" class="btn btn-default btn-lg">
             <span class="glyphicon glyphicon-download"></span>
             <span class="glyphicon glyphicon-cloud-upload"></span>
             AIA file
           </button>
           </a>
-          <a href="7/GCM.apk">
+          <a href="7/GCMtest.apk">
           <button type="button" class="btn btn-default btn-lg">
         <span class="glyphicon glyphicon-download"></span>
                 <span class="glyphicon glyphicon-phone"></span>
