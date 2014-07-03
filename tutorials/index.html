@@ -581,13 +581,13 @@
      <p class="lead">The designer view of appears as follows:</p>
      <img alt="" src="img/gcm/designer_view.png" width="300">
 
-     <p class="lead">The blocks for the program logic is as follows:</p>
+     <p class="lead">The blocks for the program logic is as follows. This includes behavior to register the device if it has not been registered already, send a message to the Google App Script Server, and receive messages from the Google App Script Server.</p>
 
      <img alt="" src="img/gcm/blocks.png">
 
      <p class="lead">In the GoogleCloudMessaging component make sure to input your Google App Scripts Server URL.</p>
 
-     <p class="lead">In order to handle the device registration the <code>doPost</code> function in the <code>serverMain.gs</code> will include the following code snippet. </p>
+     <p class="lead">In order to handle the device registration and unresgistration, the <code>doPost</code> function in the <code>serverMain.gs</code> will include the following code snippet. </p>
          
      <code>
      	if(eventInfo.parameter.regId) { <br>
@@ -606,13 +606,17 @@
      </code>	
 
      <p class="lead">After you register the device, you should see a registration successfully on the app, and if you type "{}" into your GCM Server page, you should see a new registration entry from your device.
-</p>
-     <div>
-     	<p class="lead">
-      	</p>
+	</p>
+    <p class="lead"> Similarly, there is corresponding code to handle the "sendAll" type in the Google App Script Server.
 
-     </div>
+    <code>
+    	if(eventInfo.parameter.type === 'sendAll'){ <br>
+		&nbsp;&nbsp;&nbsp;sendGCM2All(eventInfo.parameter.gcmMessage);<br>
+		}
+    </code>
+    </p>
 
+    
          <p>
           <a href="7/GCMtest.aia">
             <button type="button" class="btn btn-default btn-lg">
