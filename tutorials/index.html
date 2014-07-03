@@ -453,7 +453,7 @@
          </div><br>
          <br>
          <div class="col-md-12">
-         		<div class="lead">We will include some non-visible components such as the LinkedData and LocationProbeSensors. <i>LinkedData1</i> is used to serialize the form into triples and write them to storage. <i>LinkedData2</i> is used for reading those triples from a file in storage. <i>LocationProbeSensor</i> is used for obtaining the latitude and longitude of the user's current location.
+         		<div class="lead">We will include some non-visible components such as the LinkedData and LocationProbeSensors. <i>LinkedData</i> is used to serialize the form into triples and write them to storage. <i>LinkedData2</i> is used for reading those triples from a file in storage. <i>LocationProbeSensor</i> is used for obtaining the latitude and longitude of the user's current location.
          		</div>
          		<img alt="" src="img/form/non-visible.png" width="400">
          	
@@ -498,8 +498,8 @@
     <a id="5"></a>
      <h2 class="heading">5. Save the constructed data in the phone<br/></h2>
      <div>
-     	<p class="lead"> When using the the LinkedDataForm, it has to be used in conjunction with the LinkedDataForm. To "convert" the data represented in the form in to a LinkedData format, first call the <i>AddDataFromLinkedDataForm</i> method in the <i>LinkedData1</i> component. This will create a model of the data in the LinkedData1 component. <br>
-     	If the conversion worked, you can call the <i>WriteDataToLocal</i> method in LinkedData1 component. Please note the path you have to give should be an absolute path. If you use <code>/sdcard/data.ttl</code>, the data file will be created at the root of your mobile phone's file system. <br>
+     	<p class="lead"> When using the the LinkedDataForm, it has to be used in conjunction with the LinkedDataForm. To "convert" the data represented in the form in to a LinkedData format, first call the <i>AddDataFromLinkedDataForm</i> method in the <i>LinkedData</i> component. This will create a model of the data in the LinkedData component. <br>
+     	If the conversion worked, you can call the <i>WriteDataToLocal</i> method in LinkedData component. Please note the path you have to give should be an absolute path. If you use <code>/sdcard/data.ttl</code>, the data file will be created at the root of your mobile phone's file system. <br>
      	If the file was successfully written to the phone, you may read it using another LinkedData component. We have used <i>LinkedData2</i> for this purpose.
       	</p>
       	<img src="img/completeForm/blocks.png" alt="" width="1000">
