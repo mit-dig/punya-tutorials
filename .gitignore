@@ -1,0 +1,11 @@
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
