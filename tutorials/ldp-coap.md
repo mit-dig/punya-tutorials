@@ -11,7 +11,7 @@ The goal of this tutorial is to learn how to build your first mobile app exploit
 
 We will look at an example of mobile phone sensor sharing app, using the **LDP-CoAP Client** component for Punya. 
 
-The app we are going to build will work as a client of an external CoAP server: each of you will be able to publish sensors and sensor data as resources with their app, as well as to discover resources published by other tutorial participants.
+The app we are going to build will work as a client of an external CoAP server: you will be able to publish sensors and sensor data as resources with their app, as well as to discover resources published by other tutorial users.
 
 ## Mobile device sensor sharing app
 
@@ -37,19 +37,19 @@ The second non-visible component is the `LdpCoapClient` from the **Connectivity*
 
 ## Set the Server URL
 
-Now, some user interface. Let’s start with a `VerticalArrangement` (from the **Layout** list in the palette) for the main flow of UI components: we will set “Fill parent” for both _Height_ and _Width_ properties. 
+Now, some user interface. Let’s start with a `VerticalArrangement` (from the **Layout** list in the palette) for the main flow of UI components: we will set Fill parent for both _Height_ and _Width_ properties. 
 
-Now add an `HorizontalArrangement` within it, with “Automatic” _Height_ and “Fill parent” _Width_. 
+Now add an `HorizontalArrangement` within it, with Automatic _Height_ and Fill parent _Width_. 
 
-We firstly need a text field to allow the user to set the URL of the LDP-CoAP server: inside the HorizontalArrangement add a Label (from the **User Interface** list in the palette) and set “Server URL:” for the Text property on the Properties panel. 
+We firstly need a text field to allow the user to set the URL of the LDP-CoAP server: inside the HorizontalArrangement add a Label (from the **User Interface** list in the palette) and set "Server URL:" for the Text property on the Properties panel. 
 
 Now add a TextBox next to the Label and set both its Hint and Text to `coap://punya-sparql.csail.mit.edu:5683`, which resolves to `coap://37.183.195.98:5683` at the time of writing this tutorial. 
 
-Notice that the CoAP protocol has `coap://` URI scheme and default UDP port `5683`. You can set its _Width_ to “Fill parent” for better looks. 
+Notice that the CoAP protocol has `coap://` URI scheme and default UDP port `5683`. You can set its _Width_ to Fill parent for better looks. 
 
 ![A screenshot of the Punya Designer view.](ldp-coap/gui.png){:.enlargeImage}
 
-It may be useful to give this TextBox a recognizable name, e.g. _"ServerTextBox”_, by selecting it in the Components hierarchy to the right of the UI screen and clicking Rename.
+It may be useful to give this TextBox a recognizable name, e.g. _ServerTextBox_, by selecting it in the Components hierarchy to the right of the UI screen and clicking Rename.
 
 ![A screenshot of the Punya Designer view.](ldp-coap/rename-textbox.png){:.enlargeImage}
 
@@ -57,13 +57,13 @@ It may be useful to give this TextBox a recognizable name, e.g. _"ServerTextBox�
 
 Now we need another `HorizontalArrangement` row with a Label and a TextBox: this is for allowing users to insert their name. 
 
-We can call this TextBox _“UserTextBox”_.
+We can call this TextBox _UserTextBox_.
 
 ![A screenshot of the Punya Designer view.](ldp-coap/username.png){:.enlargeImage}
 
 ## Add a button to register new sensors
 
-Now we need a Button labeled _“Register sensor”_ with Width set to “Fill parent”. We can rename it _“RegisterButton”_ to be more meaningful.
+Now we need a Button labeled _Register sensor_ with Width set to Fill parent. We can rename it _RegisterButton_ to be more meaningful.
 
 Sensor discovery will occur automatically through server polling. 
 
@@ -75,9 +75,9 @@ The `TimerInterval` property holds the time (in milliseconds) before the timer e
 
 ## Add the sensor list
 
-Now we need a `ListView` component called _“SensorListView”_ to show all discovered sensors: let’s set its Width to “Fill parent” and Height to **30 percent** or **35 percent** (that should be good for the majority of screen sizes and resolutions).
+Now we need a `ListView` component called _SensorListView_ to show all discovered sensors: let’s set its Width to Fill parent and Height to **30 percent** or **35 percent** (that should be good for the majority of screen sizes and resolutions).
 
-Finally, we add a `TextBox` called _“OutputTextBox”_ for sensor data, with both Width and Height set to “Fill parent” to fill the rest of the screen. 
+Finally, we add a `TextBox` called _OutputTextBox_ for sensor data, with both Width and Height set to Fill parent to fill the rest of the screen. 
 
 This is the end result:
 
@@ -256,7 +256,7 @@ To use the LDP-CoAP Client, the first step is to take it from the Connectivity s
 
 ![A screenshot of the Punya Designer view.](ldp-coap/ldp-coap-client.png){:.enlargeImage}
 
-## Block Editor
+## Blocks Editor
 
 Then go to the `Blocks Editor`. 
 
@@ -409,7 +409,7 @@ For example, the following block performs an OPTIONS request on the `alice` reso
 
 ## CoRE Link Format resource discovery
 
-To perform resource discovery according to the (CoRE Link Format specification)[https://tools.ietf.org/html/rfc6690]{:target="_blank"}, several blocks are available, depending on the MIME type of the response content.
+To perform resource discovery according to the [CoRE Link Format specification](https://tools.ietf.org/html/rfc6690){:target="_blank"}, several blocks are available, depending on the MIME type of the response content.
 
 To perform a discovery that returns a `text/turtle` response content format, the following `DiscoveryResourcesTextTurtle`{:.method} block is available:
 
